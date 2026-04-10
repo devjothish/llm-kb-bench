@@ -2,75 +2,64 @@
 
 > Karpathy on Karpathy: benchmarking LLM knowledge base tools on their inspiration's own work.
 
-A reproducible benchmark of LLM-compiled knowledge base tools, measuring token cost, query accuracy, drift detection, and operational complexity on the same corpus.
+A reproducible benchmark of LLM-compiled knowledge base tools. Same corpus, same metrics, same methodology, different tools.
 
-## What This Is
+## Results (v0.1)
 
-After Andrej Karpathy posted his [LLM Knowledge Bases gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) on April 3, 2026, the community shipped at least five implementations within four days. Graphify hit 7,000 stars in two days. Cole Medin built a Claude Code memory variant. Three more implementations followed.
+| Metric | graphify | claude-memory-compiler |
+|--------|----------|----------------------|
+| Setup time | TBD | TBD |
+| Compile tokens | TBD | TBD |
+| Compile time | TBD | TBD |
+| Storage size | TBD | TBD |
+| Avg query tokens | TBD | TBD |
+| Avg query latency | TBD | TBD |
+| Accuracy | TBD | TBD |
+| Drift detection | TBD | TBD |
+| Output portable | TBD | TBD |
+| Complexity (1-5) | TBD | TBD |
 
-Every blog post describes one tool. Nobody benchmarks them against each other.
+> Results filled after first benchmark run. Run `./scripts/run_all.sh` to reproduce.
 
-This repo does. Same corpus, same metrics, same methodology, different tools. The numbers settle the comparison.
+### Charts
 
-## What This Is Not
+![Compilation Cost](reports/charts/compile_comparison.png)
+![Query Accuracy](reports/charts/accuracy_comparison.png)
+![Query Latency](reports/charts/query_latency.png)
 
-- Yet another LLM knowledge base implementation
-- A recommendation engine (we publish numbers, you pick)
-- A long-term maintenance project (each phase is shippable; we can stop after any)
+## Reproduce
 
-## Status
+```bash
+git clone https://github.com/<owner>/llm-kb-bench
+cd llm-kb-bench
+pip install -e ".[dev]"
+./scripts/run_all.sh
+```
 
-**Phase 1 (v0.1):** In planning. Head-to-head benchmark of Graphify vs claude-memory-compiler.
-
-See `docs/plans/2026-04-08-llm-kb-bench-design.md` (one level up) for the full design.
-
-## Phase Plan
-
-| Phase | Scope | Status |
-|-------|-------|--------|
-| v0.1 | Graphify vs claude-memory-compiler head-to-head | Planning |
-| v0.2 | Add llm-wiki-compiler, karpathy-wiki, karpathy-llm-wiki | Not started |
-| v0.3 | Add baselines (LangChain RAG, GraphRAG) | Not started |
-| v0.4 | CI + live dashboard | Optional |
-
-## Metrics
-
-Every tool is measured on:
-
-1. Setup time (clone to first compile)
-2. Compile token cost
-3. Compile wall time
-4. Storage size
-5. Query token cost
-6. Query latency (P50, P95)
-7. Query accuracy (LLM-as-judge with rubric)
-8. Drift detection support
-9. Output portability
-10. Operational complexity (1-5 rating)
+Requires: Python 3.10+, Anthropic API key (for LLM-as-judge grading).
 
 ## Corpus
 
 Karpathy's public material, pinned by SHA256:
-
 - **Repos:** nanoGPT, micrograd, llm.c
-- **Essays:** Software 2.0, A Recipe for Training Neural Networks, Yes You Should Understand Backprop
-- **Talks:** State of GPT, LLM OS
+- **Blog posts:** Software 2.0, A Recipe for Training Neural Networks, Yes You Should Understand Backprop, Deep Neural Nets 33 Years Ago
 
-About 50 files. Mix of code, markdown, and prose. Reproducible months from now.
+~50 files. Mix of code, markdown, and prose. See [corpus/README.md](corpus/README.md) for details.
 
-## Reproducibility
+## Methodology
 
-```bash
-git clone <this-repo>
-cd llm-kb-bench
-./scripts/run_all.sh
-```
+10 metrics measured per tool. Accuracy graded by Claude Sonnet using a strict 0-3 rubric with 20% human spot-checks. Full methodology: [METHODOLOGY.md](METHODOLOGY.md).
 
-That's it. SHA256-verified corpus. Documented LLM-as-judge prompts. Every run snapshotted under `results/<date>/`.
+## Adding a Tool
+
+1. Create `tools/<tool_name>/wrapper.py` implementing `ToolWrapper`
+2. Register in `benchmarks/harness.py` `TOOL_REGISTRY`
+3. Run `./scripts/run_all.sh`
+4. Submit a PR
 
 ## License
 
-MIT. Use the numbers. Cite the repo.
+MIT
 
 ## Author
 
