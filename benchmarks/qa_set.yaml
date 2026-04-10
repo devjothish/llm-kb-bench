@@ -1,0 +1,50 @@
+questions:
+  - question: "What is the loss function used in nanoGPT's training loop?"
+    expected_concepts: ["cross_entropy", "F.cross_entropy", "logits"]
+    source_files: ["nanoGPT/train.py"]
+    difficulty: factual_recall
+
+  - question: "What does the Value class in micrograd represent?"
+    expected_concepts: ["scalar", "gradient", "backward", "autograd", "computational graph"]
+    source_files: ["micrograd/engine.py"]
+    difficulty: factual_recall
+
+  - question: "What optimizer does nanoGPT use by default?"
+    expected_concepts: ["AdamW", "weight_decay", "learning_rate", "configure_optimizers"]
+    source_files: ["nanoGPT/model.py"]
+    difficulty: factual_recall
+
+  - question: "How does nanoGPT's approach to training differ from micrograd's in terms of scale and complexity?"
+    expected_concepts: ["GPU", "batched", "transformer", "scalar", "single example", "backprop"]
+    source_files: ["nanoGPT/train.py", "micrograd/engine.py"]
+    difficulty: cross_document_synthesis
+
+  - question: "What common optimization techniques appear across nanoGPT and llm.c?"
+    expected_concepts: ["gradient accumulation", "learning rate schedule", "weight decay", "warmup"]
+    source_files: ["nanoGPT/train.py", "llm.c/train_gpt2.c"]
+    difficulty: cross_document_synthesis
+
+  - question: "How do the codebases in this corpus reflect the progression from educational to production code?"
+    expected_concepts: ["micrograd simplicity", "nanoGPT medium scale", "llm.c performance", "CUDA", "C"]
+    source_files: ["micrograd/engine.py", "nanoGPT/model.py", "llm.c/train_gpt2.c"]
+    difficulty: cross_document_synthesis
+
+  - question: "What is Karpathy's main argument in 'Software 2.0' and how does his code reflect it?"
+    expected_concepts: ["neural networks replace code", "learned weights", "data as program", "nanoGPT"]
+    source_files: ["software-2.0"]
+    difficulty: conceptual_inference
+
+  - question: "Based on 'A Recipe for Training Neural Networks', what debugging steps should you follow when nanoGPT training diverges?"
+    expected_concepts: ["overfit one batch", "visualize", "learning rate", "simplify", "regularization"]
+    source_files: ["a-recipe-for-training-neural-networks", "nanoGPT/train.py"]
+    difficulty: conceptual_inference
+
+  - question: "How does the backpropagation implementation in micrograd relate to the concepts explained in 'Yes You Should Understand Backprop'?"
+    expected_concepts: ["chain rule", "topological sort", "_backward", "gradient flow", "computational graph"]
+    source_files: ["micrograd/engine.py", "yes-you-should-understand-backprop"]
+    difficulty: cross_format
+
+  - question: "What performance optimizations in llm.c address the training efficiency concerns Karpathy raises in his blog posts?"
+    expected_concepts: ["CUDA", "memory layout", "fused kernels", "batch size", "throughput"]
+    source_files: ["llm.c/train_gpt2.c", "a-recipe-for-training-neural-networks"]
+    difficulty: cross_format
