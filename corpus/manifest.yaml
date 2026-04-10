@@ -1,0 +1,36 @@
+sources:
+  repos:
+    - name: nanoGPT
+      url: https://github.com/karpathy/nanoGPT
+      commit: master
+      include: ["*.py", "*.md"]
+      description: "Simplest, fastest repository for training/finetuning medium-sized GPTs"
+
+    - name: micrograd
+      url: https://github.com/karpathy/micrograd
+      commit: master
+      include: ["*.py", "*.md", "*.ipynb"]
+      description: "A tiny scalar-valued autograd engine and neural net library"
+
+    - name: llm.c
+      url: https://github.com/karpathy/llm.c
+      commit: master
+      include: ["*.c", "*.h", "*.md", "*.py"]
+      description: "LLM training in simple, raw C/CUDA"
+
+  blog_posts:
+    - name: software-2.0
+      url: https://karpathy.medium.com/software-2-0-a64152b37c35
+      description: "Karpathy's seminal essay on neural networks as the new software"
+
+    - name: a-recipe-for-training-neural-networks
+      url: http://karpathy.github.io/2019/04/25/recipe/
+      description: "Practical advice for training neural networks"
+
+    - name: yes-you-should-understand-backprop
+      url: https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b
+      description: "Why understanding backpropagation matters"
+
+    - name: deep-neural-nets-33-years-ago
+      url: http://karpathy.github.io/2022/03/14/lecun1989/
+      description: "Reproducing LeCun 1989 paper results"
