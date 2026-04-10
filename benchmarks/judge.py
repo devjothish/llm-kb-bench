@@ -24,7 +24,7 @@ def grade_answer(
     question: dict,
     tool_answer: str,
     client: anthropic.Anthropic | None = None,
-    model: str = "claude-sonnet-4-6-20250514",
+    model: str = "claude-haiku-4-5-20251001",
 ) -> dict:
     if client is None:
         client = anthropic.Anthropic()
@@ -42,6 +42,12 @@ def grade_answer(
     )
 
     text = response.content[0].text.strip()
+
+    # Strip markdown code fences if present
+    if text.startswith("```"):
+        lines = text.split("\n")
+        lines = [l for l in lines if not l.strip().startswith("```")]
+        text = "\n".join(lines).strip()
 
     try:
         result = json.loads(text)

@@ -6,20 +6,20 @@ A reproducible benchmark of LLM-compiled knowledge base tools. Same corpus, same
 
 ## Results (v0.1)
 
-| Metric | graphify | claude-memory-compiler |
-|--------|----------|----------------------|
-| Setup time | TBD | TBD |
-| Compile tokens | TBD | TBD |
-| Compile time | TBD | TBD |
-| Storage size | TBD | TBD |
-| Avg query tokens | TBD | TBD |
-| Avg query latency | TBD | TBD |
-| Accuracy | TBD | TBD |
-| Drift detection | TBD | TBD |
-| Output portable | TBD | TBD |
-| Complexity (1-5) | TBD | TBD |
+| Metric | graphify | naive-rag |
+|--------|----------|-----------|
+| Setup time | 0.1s | 2.2s |
+| Compile tokens | 0 (local AST) | 0 (local embeddings) |
+| Compile time | 0.1s | 14.4s |
+| Storage size | 578 KB | ~0 KB (in-memory) |
+| Avg query tokens | 0 | 1,428 |
+| Avg query latency | 0.15s | 3.06s |
+| Accuracy | 10.0% | 40.0% |
+| Drift detection | No | No |
+| Output portable | Yes (JSON + HTML) | No (in-memory DB) |
+| Complexity (1-5) | 2 | 2 |
 
-> Results filled after first benchmark run. Run `./scripts/run_all.sh` to reproduce.
+> Graphify compiles 140x faster with zero LLM tokens (pure AST extraction) but returns graph nodes, not prose. Naive RAG is slower and costs tokens per query but produces natural language answers the judge can grade. Run `./scripts/run_all.sh` to reproduce.
 
 ### Charts
 

@@ -9,11 +9,11 @@ from benchmarks.models import BenchmarkRun, JudgeGrade, CompileResult
 from benchmarks.judge import load_qa_set, grade_answer
 from tools.base import ToolWrapper
 from tools.graphify.wrapper import GraphifyWrapper
-from tools.claude_memory_compiler.wrapper import ClaudeMemoryCompilerWrapper
+from tools.naive_rag.wrapper import NaiveRAGWrapper
 
 TOOL_REGISTRY: dict[str, type[ToolWrapper]] = {
     "graphify": GraphifyWrapper,
-    "claude-memory-compiler": ClaudeMemoryCompilerWrapper,
+    "naive-rag": NaiveRAGWrapper,
 }
 
 CORPUS_RAW_DIR = Path("corpus/raw")

@@ -1,0 +1,98 @@
+{
+  "tool_name": "graphify",
+  "tool_version": "0.3.27",
+  "setup": {
+    "elapsed_seconds": 0.14706591702997684,
+    "success": true
+  },
+  "compile": {
+    "elapsed_seconds": 0.11974991706665605,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "output_size_bytes": 591896,
+    "success": true
+  },
+  "queries": [
+    {
+      "elapsed_seconds": 0.14145174995064735,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.14408183307386935,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.13888529094401747,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.15632662503048778,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.14152400009334087,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.14235541690140963,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.1462808329379186,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.16711250005755574,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.14994112506974488,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    },
+    {
+      "elapsed_seconds": 0.16546791698783636,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "success": true
+    }
+  ],
+  "drift_detection_supported": false,
+  "output_portable": true,
+  "operational_complexity": 2,
+  "operational_complexity_rationale": "pip install + API key",
+  "accuracy": {
+    "mean_grade": 0.3,
+    "max_possible": 3.0,
+    "percentage": 10.0,
+    "num_questions": 10
+  }
+}
