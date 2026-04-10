@@ -2,11 +2,11 @@
   "tool_name": "graphify",
   "tool_version": "0.3.27",
   "setup": {
-    "elapsed_seconds": 0.14706591702997684,
+    "elapsed_seconds": 0.19597012491431087,
     "success": true
   },
   "compile": {
-    "elapsed_seconds": 0.11974991706665605,
+    "elapsed_seconds": 0.29296491597779095,
     "input_tokens": 0,
     "output_tokens": 0,
     "total_tokens": 0,
@@ -15,73 +15,73 @@
   },
   "queries": [
     {
-      "elapsed_seconds": 0.14145174995064735,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 4.202393708983436,
+      "input_tokens": 4022,
+      "output_tokens": 224,
+      "total_tokens": 4246,
       "success": true
     },
     {
-      "elapsed_seconds": 0.14408183307386935,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 3.007994499988854,
+      "input_tokens": 2337,
+      "output_tokens": 305,
+      "total_tokens": 2642,
       "success": true
     },
     {
-      "elapsed_seconds": 0.13888529094401747,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 2.6229449999518692,
+      "input_tokens": 2277,
+      "output_tokens": 209,
+      "total_tokens": 2486,
       "success": true
     },
     {
-      "elapsed_seconds": 0.15632662503048778,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 5.608641917002387,
+      "input_tokens": 4037,
+      "output_tokens": 445,
+      "total_tokens": 4482,
       "success": true
     },
     {
-      "elapsed_seconds": 0.14152400009334087,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 4.371273666038178,
+      "input_tokens": 1870,
+      "output_tokens": 419,
+      "total_tokens": 2289,
       "success": true
     },
     {
-      "elapsed_seconds": 0.14235541690140963,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 4.905205124989152,
+      "input_tokens": 1717,
+      "output_tokens": 417,
+      "total_tokens": 2134,
       "success": true
     },
     {
-      "elapsed_seconds": 0.1462808329379186,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 5.817782416008413,
+      "input_tokens": 4054,
+      "output_tokens": 471,
+      "total_tokens": 4525,
       "success": true
     },
     {
-      "elapsed_seconds": 0.16711250005755574,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 5.24683958303649,
+      "input_tokens": 4000,
+      "output_tokens": 496,
+      "total_tokens": 4496,
       "success": true
     },
     {
-      "elapsed_seconds": 0.14994112506974488,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 3.623805250041187,
+      "input_tokens": 2348,
+      "output_tokens": 288,
+      "total_tokens": 2636,
       "success": true
     },
     {
-      "elapsed_seconds": 0.16546791698783636,
-      "input_tokens": 0,
-      "output_tokens": 0,
-      "total_tokens": 0,
+      "elapsed_seconds": 5.264044750016183,
+      "input_tokens": 3986,
+      "output_tokens": 468,
+      "total_tokens": 4454,
       "success": true
     }
   ],
@@ -90,9 +90,9 @@
   "operational_complexity": 2,
   "operational_complexity_rationale": "pip install + API key",
   "accuracy": {
-    "mean_grade": 0.3,
+    "mean_grade": 1.2,
     "max_possible": 3.0,
-    "percentage": 10.0,
+    "percentage": 40.0,
     "num_questions": 10
   }
 }
